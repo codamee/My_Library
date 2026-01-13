@@ -17,3 +17,5 @@ A simple web application designed to help users manage their book collection.
 2. Open `index.html` in your browser.
 3. Fill out the form and click the button to add a book to your dashboard.
 4. Click the "Status" button on any card to change its reading state.
+
+* Perfect fir in 100% of browser zoom .
