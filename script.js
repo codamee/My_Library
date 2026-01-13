@@ -1,4 +1,5 @@
 let mylibrary = [];
+
 function Book(name, author, pages, status) {
     this.name = name;
     this.author = author;
@@ -6,16 +7,19 @@ function Book(name, author, pages, status) {
     this.status = status;
     this.id = crypto.randomUUID();
 }
+
 function addBookToLibrary(name, author, pages, status) {
     let book = new Book(name, author, pages, status);
     mylibrary.push(book);
 }
+
 addBookToLibrary("Atomic Habits", "James clear", 350, "Not yet read");
+
 function libraryValues() {
     let btn = document.querySelector("form p button");
     let form = document.querySelector("form");
     btn.addEventListener("click", (e) => {
-        // e.preventDefault();
+        
         let formData = new FormData(form);
         let data = Object.fromEntries(formData.entries());
         if (data.name && data.pages && data.author) {
@@ -30,7 +34,9 @@ function libraryValues() {
         }
     });
 }
+
 libraryValues();
+
 let container = document.querySelector(".container");
 function loadLibrary() {
     container.innerHTML = ``;
@@ -49,17 +55,23 @@ function loadLibrary() {
         container.append(elem);
     });
 }
+
 loadLibrary();
+
 container.addEventListener("click", (e) => {
+    
     if (e.target.classList.contains("readStatus")) {
         let dataId = e.target.dataset.id;
         let id = mylibrary.find((item) => item.id == dataId);
         id.status =
             id.status == "Not yet read" ? "Already Read" : "Not yet read";
     }
+    
     if (e.target.classList.contains("cancelBtn")) {
         let dataId = e.target.dataset.id;
         mylibrary = mylibrary.filter((book) => book.id !== dataId);
     }
+    
     loadLibrary();
+    
 });
