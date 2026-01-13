@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    box-sizing: border-box;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 17vh 80vh;
+    gap: 10px;
+}
+nav {
+    grid-area: 1/1/2/3;
+    font-size: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background-color: #f6bbbb;
+    color: #5a0000;
+    font-weight: bold;
+}
+nav p {
+    cursor: pointer;
+}
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    gap: 50px;
+}
+ul li {
+    transition: 0.4s all ease-in-out;
+}
+ul li:hover {
+    color: #eb0000;
+    cursor: pointer;
+}
+
+form {
+    background-color: #f6bbbb;
+    padding: 50px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+form p {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    /* margin-bottom: 30px; */
+}
+form p label:not([for="status"]),
+form p input:not(input[type="checkbox"]),
+form p button {
+    margin: 0;
+    padding: 0;
+    display: block;
+    font-family: inherit;
+    font-size: inherit;
+}
+form p input {
+    height: 40px;
+    border: none;
+    outline: none;
+    background-color: #f6bbbb;
+    border-bottom: 2px solid #5a0000;
+}
+
+form span input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+form p button {
+    color: white;
+    width: 40%;
+    border: none;
+    font-weight: 600;
+    margin: 0px auto;
+    border-radius: 5px;
+    padding: 10px 20px;
+    background-color: #5a0000;
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+}
+form p button:hover {
+    background-color: #eb0000;
+    color: black;
+}
+form p textarea {
+    resize: none;
+    background-color: #f6bbbb;
+    border: none;
+    font-family: inherit;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 18px;
+    border: 1px solid indianred;
+    outline: none;
+}
+.container {
+    background-color: #f6bbbb;
+    padding: 50px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr 1fr;
+    gap: 30px;
+    overflow: auto;
+}
+.container .card {
+    /* border: 2px solid black; */
+    box-shadow: 2px 2px 5px 1px black;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+}
+.container .card :first-child {
+    font-size: 40px;
+    font-weight: 600;
+}
+.container .card :nth-child(2) {
+    width: fit-content;
+    padding: 2px 4px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.container .card :last-child {
+    margin: 50px 0px 5px 0px;
+    text-align: end;
+}
+.container .card img {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    transition: all 0.4s ease-in-out;
+    transform-origin: center;
+}
+.container .card img:hover {
+    width: 30px;
+    transform: rotate(180deg);
+}
+.green {
+    background-color: #a4d4a4;
+}
+.red {
+    background-color: #ff9393;
+}

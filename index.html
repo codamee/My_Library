@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>MyLibrary</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body>
+        <nav>
+            <p>MyLibrary</p>
+            <ul>
+                <li>Home</li>
+                <li>Books</li>
+                <li>Dashboard</li>
+            </ul>
+        </nav>
+
+        <div class="container"></div>
+
+        <form action="">
+            <p>
+                <label for="name">Name</label>
+                <input
+                    required
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="Atomic Habits"
+                />
+            </p>
+            <p>
+                <label for="author">Author</label>
+                <input
+                    required
+                    type="text"
+                    name="author"
+                    id="author"
+                    placeholder="James Clear"
+                />
+            </p>
+            <p>
+                <label for="pages">Pages</label>
+                <input
+                    required
+                    type="number"
+                    name="pages"
+                    id="pages"
+                    placeholder="350"
+                />
+            </p>
+            <p>
+                <label for="info">Discription(Optional)</label>
+                <textarea name="info" id="info" rows="5"></textarea>
+            </p>
+            <span>
+                <input type="checkbox" required name="status" id="status" />
+                <label for="status">Did you read this book?</label>
+            </span>
+            <p>
+                <button>Add Book</button>
+            </p>
+        </form>
+
+        <script src="script.js"></script>
+    </body>
+</html>
